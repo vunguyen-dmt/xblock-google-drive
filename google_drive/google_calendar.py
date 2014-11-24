@@ -116,3 +116,13 @@ class GoogleCalendarBlock(XBlock):
         return {
             'result': 'success',
         }
+
+    @XBlock.json_handler
+    def clear_display_name(self, field, suffix=''):
+
+        if field['element'] == 'Display Name':
+            del self.display_name
+
+        return {
+            'result': 'success',
+        }
