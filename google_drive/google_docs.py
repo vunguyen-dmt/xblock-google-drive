@@ -77,6 +77,13 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
 
         return fragment
 
+    def index_view(self):
+        return {
+            "xblock_keywords": "google document doc",
+            "name": self.display_name,
+            "content_type": "Google Document",
+        }
+
     @XBlock.json_handler
     def studio_submit(self, submissions, suffix=''):
 
