@@ -80,7 +80,9 @@ class GoogleDocumentBlock(XBlock, PublishEventMixin):
     def index_view(self):
         return {
             "xblock_keywords": "google document doc",
-            "name": self.display_name,
+            "content": {
+                "name": self.display_name,
+            },
             "content_type": "Google Document",
         }
 
