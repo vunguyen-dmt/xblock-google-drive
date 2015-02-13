@@ -11,9 +11,9 @@ Install the requirements into the python virtual environment of your
 `edx-platform` installation by running the following command from the
 root folder:
 
-```bash
+``
 $ pip install -r requirements.txt
-```
+``
 
 Enabling in Studio
 ------------------
@@ -32,16 +32,16 @@ Workbench installation and settings
 
 Install to the workbench's virtualenv by running the following command form the google-drive repo root:
 
-```bash
+``
 pip install -r requirements.txt
-```
+``
 
 Running the workbench
 ---------------------
 
-```bash
+``
 $ ./manage.py runserver 8000
-```
+``
 
 Access it at [http://localhost:8000/](http://localhost:8000).
 
@@ -51,21 +51,21 @@ Running tests
 From google-drive directory, run the tests with the
 following command:
 
-```bash
+``
 $ DJANGO_SETTINGS_MODULE="settings" nosetests --with-django tests/*
-```
+``
 
 If you want to run only the integration or the unit tests, append the directory to the command. You can also run separate modules in this manner.
 
-```bash
+``
 $ DJANGO_SETTINGS_MODULE="settings" nosetests --with-django tests/unit
-```
+``
 
 To see the coverage, run the tests using the following command:
 
-```bash
+``
 $ DJANGO_SETTINGS_MODULE="settings" nosetests --with-coverage --cover-package="google_drive" --with-django
-```
+``
 
 If you have not installed the xblock-sdk in the active virtualenv,
 you might also have to prepend `PYTHONPATH=".:/path/to/xblock"` to the command above.
@@ -118,8 +118,8 @@ Public License (AGPLv3).
 On a Mac, some people have received errors when installing lxml, trying to find a specific header file for the compiler
 
 Try the following if you encounter a problem:
-```
+``
 CPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/libxml2 CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments pip install lxml
-```
+``
 
 
